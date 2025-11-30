@@ -50,7 +50,7 @@ It comes with the basic components and set of pre-built pages required to lay th
 
 ## Deploy Dokploy
 **Build Type**
-Railpack
+-> Railpack
 ### Add Command to allow public domain
 ```bash
 gunicorn config.wsgi:application --bind 0.0.0.0:8000
