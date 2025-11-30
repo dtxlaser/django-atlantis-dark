@@ -15,6 +15,5 @@ COPY . .
 RUN python manage.py migrate
 
 # gunicorn
-#CMD ["gunicorn", "--config", "gunicorn-cfg.py", "config.wsgi"]
 CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000"]
 
