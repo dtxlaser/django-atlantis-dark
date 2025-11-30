@@ -68,12 +68,20 @@ CSRF_TRUSTED_ORIGINS = [
 ```bash
 CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000"]
 ```
-### OR add external command to avoid hardcode. Dokploy → Advanced → Start Command:
+### For Build Type -> **Dockerfile**
+*Docker File Path*
+```bash
+/Dockerfile
+```
+*Docker Context Path*
+```bash
+.
+```
+### For Build Type -> **Railpack**
+### add external command to avoid hardcode. Dokploy → Advanced → Start Command:
 ```bash
 gunicorn config.wsgi:application --bind 0.0.0.0:8000
 ```
-**Build Type**
--> Railpack
 ### Add port 8000 to Firewall
 ```bash
 iptables -A DOCKER-USER -p tcp --dport 8000 -j ACCEPT
